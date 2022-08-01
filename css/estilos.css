@@ -62,6 +62,12 @@ body{
     background-position-y: 100%;
 }
 
+.bodyServicios {
+    background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%), url(../img/Bartender-Flair-oscuro.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .titulo{
     text-align: center;
     font-size: xx-large;
@@ -136,12 +142,64 @@ body{
     color: white;
 }
 
-.servicios{
+.tiposDeServicios {
+    display: grid;
+    grid-template-areas: "estandar gold premium";
+    grid-column-gap: 8%;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.tiposDeServicios__div1, .tiposDeServicios__div2, .tiposDeServicios__div3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.tiposDeServicios__div1 {
+    grid-area: estandar;
+}
+
+.tiposDeServicios__div2 {
+    grid-area: gold;
+}
+
+.tiposDeServicios__div3 {
+    grid-area: premium;
+}
+
+.tiposDeServicios__div1 h3, .tiposDeServicios__div2 h3, .tiposDeServicios__div3 h3 {
+    text-align: center;
+    color: coral;
+    font-size: x-large;
+}
+
+.serviciosDiv {
+    margin-top: 5%;
+}
+
+.serviciosDiv div a {
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    color: white;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.serviciosDiv p {
     font-family: 'PT Sans', sans-serif;
     font-size: large;
-    justify-content: left;
-    padding-left: 3%;
-    line-height: 3rem;
+    line-height: 1.5rem;
+    color: white;
+    text-align: justify;
+}
+
+.serviciosDiv__p {
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .nosotros{
@@ -278,15 +336,28 @@ footer p a {
     }
 
     .bodyNosotros {
-    background-position-x: 100%;
-    background-position-y: top;
-    background-repeat: repeat-y;
+        background-position-x: 100%;
+        background-position-y: top;
+        background-repeat: repeat-y;
     }
 
     .nosotros__p1, .nosotros__p2, .nosotros__p3 {
         margin-left: auto;
         margin-right: auto;
     }
+
+    .tiposDeServicios {
+        display: grid;
+        grid-template-areas: "estandar" 
+        "gold" 
+        "premium";
+    }
+
+    .tiposDeServicios__div1, .tiposDeServicios__div2, .tiposDeServicios__div3 {
+        margin-top: 5%;
+    }
+
+
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
@@ -298,4 +369,16 @@ footer p a {
     footer {
         margin-top: 2rem;
     }   
+    
+    .tiposDeServicios {
+        display: grid;
+        grid-template-areas: "estandar" 
+        "gold" 
+        "premium";
+    }
+
+    .tiposDeServicios__div1, .tiposDeServicios__div2, .tiposDeServicios__div3 {
+        margin-top: 5%;
+    }
+
 }
