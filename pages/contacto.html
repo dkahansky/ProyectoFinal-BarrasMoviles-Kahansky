@@ -8,7 +8,7 @@
     <link rel="icon" href="../img/Logo2.png" width="16px" length="16px">
     <title>DeKa - Contacto</title>
 </head>
-<body>
+<body class="bodyGaleria">
     <header>
         <img src="../img/logo2-sinfondo.png" class="logoHeader">
         <nav>
@@ -22,26 +22,37 @@
         </nav>
     </header>
     <main>
-        <div class="divTitulo titulo"><img src="../img/logo.jpg" alt="Logo_copa_DeKa">DeKa - Barras Móviles</div>
-    </div>
-
-        <section>
-            <h1 class="h1Pages">Contacto</h1>
-
-            <h2>Contactanos y hagamos que tu evento sea único</h2>
-        <form action="">
-            <input type="text" placeholder="Nombre" required>  <input type="text" placeholder="Apellidos" required>
-            <br><input type="text" placeholder="Correo Electrónico" required> <input type="text" placeholder="Teléfono/Celular" required>
-            <br><textarea name="Comentarios" placeholder="Comentarios" id="" cols="35" rows="10"></textarea>
-            <br><input type="submit" value="Enviar">
-            <br><input type="reset" value="Limpiar formulario">
-        </form>
-        </section>
-    </div>
-        <section>
-            <h3>Conocé nuestro local</h3>
+        <h1 class="h1Pages">Contacto</h1>
+        <h2>Contactanos y hagamos que tu evento sea único</h2>
+        <div class="mainDivContacto">
+            <aside>
+                <img src="../img/cocktail-contacto-sin-fondo.png" alt="cocktail-fondo-negro" class="imagenContacto1">
+            </aside>
+            <div>
+                <form action="" class="contacto">
+                    <div class="contacto__div1">
+                        <input type="text" placeholder="Nombre/s" required class="contacto__nombre">  
+                        <input type="text" placeholder="Apellido" required class="contacto__apellido">
+                    </div>
+                    <div class="contacto__div2">
+                        <input type="text" placeholder="Correo Electrónico" required class="contacto__email"> 
+                        <input type="text" placeholder="Teléfono/Celular" required class="contacto__celular">
+                    </div>
+                    <textarea name="Comentarios" placeholder="Comentarios" id="" cols="50" rows="10" class="contacto__comentarios"></textarea>
+                    <div class="contacto__div3">
+                        <input type="submit" value="Enviar" class="contacto__submit">
+                        <input type="reset" value="Limpiar formulario" class="contacto__reset">
+                    </div>
+                </form>
+            </div>
+            <aside>
+                <img src="../img/Cocktail-contacto-2-sin-fondo.png" alt="cocktail-colores-fondo-negro" class="imagenContacto2">
+            </aside>
+        </div>
+        <div class="mapa">
+            <h2>Conocé nuestro local</h2>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.2421466508513!2d-58.447458999999995!3d-34.6233206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3bbbd20c0d%3A0x855435463a85f783!2sAv.%20Rivadavia%205814%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1657487923869!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
+        </div>
     </main>
 
     <footer>
