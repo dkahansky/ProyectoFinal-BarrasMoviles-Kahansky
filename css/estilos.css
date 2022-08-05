@@ -22,8 +22,8 @@
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   }
   
-  .custom-toggler.navbar-toggler {
-    border-color: white;
+  .custom-toggler, .navbar-toggler {
+    border-color: white !important;
   }
 
 .nav-link:hover {
@@ -58,19 +58,17 @@ body{
 }
 
 .bodyIndex { 
-    background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%), url(../img/Barra-Movil-Evento-Fondo.png);
-    background-repeat: no-repeat;
+    background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(68, 67, 67, 0) 50%, rgba(0,0,0,1) 100%), url(../img/Barra-Movil-Evento-Fondo.png);
 }
 
 .bodyNosotros {
-    background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%), url(../img/Equipo-de-Bartenders-Oscuro.png);
+    background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(68, 67, 67, 0) 50%, rgba(0,0,0,1) 100%), url(../img/Equipo-de-Bartenders-Oscuro.png);
     background-position-x: 80%;
     background-position-y: 100%;
 }
 
 .bodyServicios {
-    background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%), url(../img/Bartender-Flair-oscuro.png);
-    background-repeat: no-repeat;
+    background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(68, 67, 67, 0) 50%, rgba(0,0,0,1) 100%), url(../img/Bartender-Flair-oscuro.png);
     background-size: cover;
 }
 
@@ -129,6 +127,7 @@ body{
     font-size: larger;
     color: coral;
     text-align: center;
+    font-weight: bold;
 } 
 
 .divIndex__div1, .divIndex__div2 {
@@ -136,6 +135,7 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
     width: 92.5%;
+    font-weight: bold;
 }
 
 .divIndex__div1__p, .divIndex__div2__p {
@@ -265,7 +265,7 @@ body{
 
 .galeria1:hover, .galeria2:hover, .galeria3:hover, .galeria4:hover, .galeria5:hover, .galeria6:hover, .galeria7:hover, .galeria8:hover, .galeria9:hover, .galeria10:hover, .galeria11:hover, .galeria12:hover {
     transform: scale(1.04);
-    z-index: 8;
+    z-index: 7;
     border: white 2px solid;
 }
 
@@ -477,6 +477,47 @@ footer{
     padding-bottom: 2rem;
 }
 
+.divIcons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 1rem;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 8;
+    height: 20vh;
+}
+
+.divIcons__allIcons {
+    width: 2rem;
+    height: 2rem;
+}
+
+.divIcons__icon1, .divIcons__icon2, .divIcons__icon3 {
+    color: white;
+    transform: translateX(-25%);
+    animation: floater 3.5s infinite;
+    transition: ease 1.75s;
+}
+
+.divIcons__icon1 {
+    animation-delay: 0s;
+}
+
+.divIcons__icon2 {
+    animation-delay: 0.5s;
+}
+
+.divIcons__icon3 {
+    animation-delay: 1s;
+}
+
+@keyframes floater {
+    0%{transform: translateX(-25%);transition: ease 1.75s;}
+    50%{transform: translateX(25%);transition: ease 1.75s;}
+  }
+
 @media screen and (min-width: 0px) and (max-width: 768px) {
     footer {
         margin-top: 2rem;
@@ -487,7 +528,8 @@ footer{
         flex-direction: column;
         justify-content: center;
         align-items: center; 
-}
+    }
+
     .footer__p__section__1, .footer__p__section__2{
         padding-left: 0rem;
         padding-right: 0rem;
@@ -507,22 +549,20 @@ footer{
         left: 1rem;
         right: auto;
         margin-top: 2rem;
+        font-size: large;
     }
 
     .divIndex__div2 h3 { 
         position: relative;
         left: auto;
         right: auto;
+        font-size: large;
     }
 
     .divIndex__div2__p, .divIndex__div1__p {
         margin-left: 0rem;
         margin-right: 0rem;
-    }
-
-    ol {
-        display: flex;
-        flex-direction: column;
+        font-size: medium;
     }
 
     .bodyNosotros {
@@ -535,6 +575,7 @@ footer{
         margin-left: 2rem;
         margin-right: 2rem;
         text-align: justify;
+        font-size: medium;
     }
 
     .tiposDeServicios {
@@ -555,6 +596,36 @@ footer{
 
     .imagenContacto1, .imagenContacto2 {
         display: none;
+    }
+
+    .divIcons__allIcons {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .titulo {
+        font-size: x-large;
+    }
+
+    .logoHeader {
+        width: 4rem;
+        height: 2rem;
+    }
+
+    .divEvento {
+        font-size: 1.5rem;
+    }
+
+    .serviciosDiv div a {
+        font-size: x-large;
+    }
+
+    .serviciosDiv p {
+        font-size: medium;
+    }
+
+    .tiposDeServicios__div1 h3, .tiposDeServicios__div2 h3, .tiposDeServicios__div3 h3 {
+        font-size: large;
     }
 }
 
