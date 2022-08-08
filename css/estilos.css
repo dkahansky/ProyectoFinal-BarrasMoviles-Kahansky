@@ -6,37 +6,17 @@
     box-sizing: border-box;
 }
 
-.nav-link {
-    font-size: large !important;
-    font-family: 'Roboto', sans-serif;
-    transition-property: size;
-    transition-duration: infinite;
-    color: white !important;
+body {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    min-height: 100vh;
 }
 
-.collapse {
-    justify-content: right;
-}
-
-.custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  }
-  
-  .custom-toggler, .navbar-toggler {
-    border-color: white !important;
-  }
-
-.nav-link:hover {
-    font-size: larger !important;
-    font-weight: bolder !important;
-    color: rgb(112, 10, 10) !important;
-}
-
-.navbar-brand {
-    color: white !important;
-}
-
-.headerDeka {
+header {
+    grid-area: header;
     position: sticky;
     top: 0rem;
     padding-top: 0.5rem;
@@ -45,61 +25,113 @@
     z-index: 9;
 }
 
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    font-size: small;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    margin-top: 3%;
+}
+
+.nav-link {
+    font-size: large !important;
+    font-family: 'Roboto', sans-serif;
+    transition-property: size;
+    transition-duration: infinite;
+    transition: ease 400ms;
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: rgb(112, 10, 10) !important;
+}
+
+.nav-item {
+    transition: ease 400ms;
+}
+
+.nav-item:hover {
+    transform: scale(1.20);
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+.navbar-collapse {
+    text-align: center;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+  
+.custom-toggler, .navbar-toggler {
+    border-color: white !important;
+  }
+
 .logoHeader{
     width: 5rem;
     height: 3rem;
     padding-left: 2rem;
 }
 
-body{
+.divIcons {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    align-items: flex-end;
+    row-gap: 1rem;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 8;
+    height: 20vh;
+}
+
+.divIcons__allIcons {
+    width: 2rem;
+    height: 2rem;
+}
+
+.divIcons__icon1, .divIcons__icon2, .divIcons__icon3 {
+    color: white;
+    transform: translateX(-25%);
+    animation: floater 3.5s infinite;
+    transition: ease 1.75s;
+}
+
+.divIcons__icon1 {
+    animation-delay: 0s;
+}
+
+.divIcons__icon2 {
+    animation-delay: 0.5s;
+}
+
+.divIcons__icon3 {
+    animation-delay: 1s;
+}
+
+@keyframes floater {
+    0%{transform: translateX(-25%);transition: ease 1.75s;}
+    50%{transform: translateX(25%);transition: ease 1.75s;}
 }
 
 .bodyIndex { 
     background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(68, 67, 67, 0) 50%, rgba(0,0,0,1) 100%), url(../img/Barra-Movil-Evento-Fondo.png);
 }
 
-.bodyNosotros {
-    background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(68, 67, 67, 0) 50%, rgba(0,0,0,1) 100%), url(../img/Equipo-de-Bartenders-Oscuro.png);
-    background-position-x: 80%;
-    background-position-y: 100%;
-}
-
-.bodyServicios {
-    background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(68, 67, 67, 0) 50%, rgba(0,0,0,1) 100%), url(../img/Bartender-Flair-oscuro.png);
-    background-size: cover;
-}
-
-.bodyGaleria {
-    background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(68, 67, 67) 50%, rgba(0,0,0,1) 100%);
-}
-
-.bodyGaleria main h2 {
-    font-family: 'PT Sans', sans-serif;
-    font-size: large;
-    text-align: center;
-    color: white;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.titulo{
+.tituloIndex{
     text-align: center;
     font-size: xx-large;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     color: white;
-}
-
-.h1Pages{
-    font-family: 'PT Sans', sans-serif;
-    font-size: x-large;
-    text-align: center;
-    color: white;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
 }
 
 .divEvento {
@@ -113,85 +145,83 @@ body{
 }
 
 .divIndex{
-    min-height: 50%;
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     color: wheat;
 }
-
-.divIndex__div1 h3, .divIndex__div2 h3 {
-    font-family: 'PT Sans', sans-serif;
-    font-size: larger;
-    color: coral;
-    text-align: center;
-    font-weight: bold;
-} 
 
 .divIndex__div1, .divIndex__div2 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 92.5%;
+    font-family: 'PT Sans', sans-serif;
     font-weight: bold;
+    text-align: center;
 }
 
+.divIndex__div1 h3, .divIndex__div2 h3 {
+    font-size: larger;
+    color: coral;
+    font-weight: bold;
+} 
+
 .divIndex__div1__p, .divIndex__div2__p {
-    text-align: center;
-    font-family: 'PT Sans', sans-serif;
     font-size: large;
     color: wheat;
     margin-bottom: 3rem;
     margin-right: 2.5rem;
     margin-left: 2.5rem;
-    }
-
-.tiposDeServicios {
-    display: flex;
-    grid-template-areas: "estandar gold premium";
-    grid-column-gap: 8%;
-    margin-top: 1rem;
-    padding-right: 2rem;
 }
 
-.tiposDeServicios__div1, .tiposDeServicios__div2, .tiposDeServicios__div3 {
+.h1Pages{
+    font-family: 'PT Sans', sans-serif;
+    font-size: x-large;
+    text-align: center;
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+    
+.bodyNosotros {
+    background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(68, 67, 67, 0) 50%, rgba(0,0,0,1) 100%), url(../img/Equipo-de-Bartenders-Oscuro.png);
+    background-position-x: 80%;
+    background-position-y: 100%;
+}
+
+.nosotros{
+    color: wheat;
+    font-weight: bold;
+    font-family: 'PT Sans', sans-serif;
+    font-size: large;
     display: flex;
     flex-direction: column;
-}
-
-.tiposDeServicios__div1 {
-    grid-area: estandar;
-}
-
-.tiposDeServicios__div2 {
-    grid-area: gold;
-}
-
-.tiposDeServicios__div3 {
-    grid-area: premium;
-}
-
-.tiposDeServicios__div1 h3, .tiposDeServicios__div2 h3, .tiposDeServicios__div3 h3 {
     text-align: center;
-    color: coral;
-    font-size: x-large;
+    line-height: 2rem;
 }
 
-.serviciosDiv {
-    margin-top: 5%;
+.nosotros__p1 {
+    margin-left: 3rem;
+    margin-right: 45rem;
+    margin-top: 2rem;
 }
 
-.serviciosDiv div a {
-    text-decoration: none;
-    font-family: 'PT Sans', sans-serif;
-    color: wheat;
-    font-size: xx-large;
-    display: flex;
-    justify-content: center;
-    margin-top: 3%;
-    margin-bottom: 3%;
+.nosotros__p2 {
+    margin-right: 3rem;
+    margin-top: 2rem;
+    margin-left: 45rem;
+}
+
+.nosotros__p3 {
+    margin-left: 3rem;
+    margin-top: 2rem;
+    margin-right: 45rem;
+}
+
+.bodyServicios {
+    background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(68, 67, 67, 0) 50%, rgba(0,0,0,1) 100%), url(../img/Bartender-Flair-oscuro.png);
+    background-size: cover;
 }
 
 .serviciosDiv p {
@@ -207,41 +237,50 @@ body{
     padding-right: 2rem;
 }
 
-.nosotros{
-    color: wheat;
-    font-weight: bold;
-    font-family: 'PT Sans', sans-serif;
-    font-size: large;
+.tiposDeServicios {
+    display: grid;
+    grid-template-areas: "estandar serviciogold premium";
+    grid-column-gap: 8%;
+    margin-top: 1rem;
+    padding-right: 2rem;
+}
+
+.tiposDeServicios__div1 {
+    grid-area: estandar;
+}
+
+.tiposDeServicios__div2 {
+    grid-area: serviciogold;
+}
+
+.tiposDeServicios__div3 {
+    grid-area: premium;
+}
+
+.tiposDeServicios__div1, .tiposDeServicios__div2, .tiposDeServicios__div3 {
     display: flex;
     flex-direction: column;
+}
+
+.tiposDeServicios__div1 h3, .tiposDeServicios__div2 h3, .tiposDeServicios__div3 h3 {
+    text-align: center;
+    color: coral;
+    font-size: x-large;
+}
+
+.serviciosDiv div a {
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    color: wheat;
+    font-size: xx-large;
+    display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
-.nosotros__p1 {
-    margin-left: 3rem;
-    margin-top: 3rem;
-    margin-right: 45rem;
-    text-align: center;
-    line-height: 2rem;
-}
-
-.nosotros__p2 {
-    margin-right: 3rem;
-    margin-top: 3rem;
-    margin-left: 45rem;
-    text-align: center;
-    line-height: 2rem;
-}
-
-.nosotros__p3 {
-    position: relative;
-    margin-right: auto;
-    margin-left: 3rem;
-    margin-top: 3rem;
-    margin-right: 45rem;
-    text-align: center;
-    line-height: 2rem;
+.body__Galeria__Contacto {
+    background-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(68, 67, 67) 50%, rgba(0,0,0,1) 100%);
 }
 
 .divGaleria {
@@ -261,12 +300,6 @@ body{
     grid-row-start: 1;
     grid-row-end: 3;
     transition: transform .5s ease;
-}
-
-.galeria1:hover, .galeria2:hover, .galeria3:hover, .galeria4:hover, .galeria5:hover, .galeria6:hover, .galeria7:hover, .galeria8:hover, .galeria9:hover, .galeria10:hover, .galeria11:hover, .galeria12:hover {
-    transform: scale(1.04);
-    z-index: 7;
-    border: white 2px solid;
 }
 
 .galeria2 {
@@ -379,20 +412,20 @@ body{
     transition: transform .5s ease;
 }
 
-.mainDivContacto {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+
+.galeria1:hover, .galeria2:hover, .galeria3:hover, .galeria4:hover, .galeria5:hover, .galeria6:hover, .galeria7:hover, .galeria8:hover, .galeria9:hover, .galeria10:hover, .galeria11:hover, .galeria12:hover {
+    transform: scale(1.04);
+    z-index: 7;
+    border: white 2px solid;
 }
 
-.imagenContacto1 {
-    width: 15rem;
-}
-
-.imagenContacto2 {
-    width: 15rem;
-    position: relative;
+.body__Galeria__Contacto main h2 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: large;
+    text-align: center;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .contacto {
@@ -402,37 +435,12 @@ body{
     row-gap: 1rem;
 }
 
-.contacto__nombre {
+.contacto__nombre, .contacto__celular, .contacto__email, .contacto__comentarios {
     font-family: 'PT Sans', sans-serif;
-    margin-right: 2rem;
-    padding-right: 0.75rem;
+    width: 25rem;
 }
 
-.contacto__apellido {
-    font-family: 'PT Sans', sans-serif;
-    margin-left: 0.75rem;
-}
-
-.contacto__celular {
-    font-family: 'PT Sans', sans-serif;
-    margin-left: 0.75rem;
-}
-
-.contacto__email {
-    font-family: 'PT Sans', sans-serif;
-    margin-right: 2rem;
-    padding-right: 0.75rem;
-}
-
-.contacto__comentarios {
-    font-family: 'PT Sans', sans-serif;
-}
-
-.contacto__submit {
-    font-family: 'PT Sans', sans-serif;
-}
-
-.contacto__reset {
+.contacto__reset, .contacto__submit {
     font-family: 'PT Sans', sans-serif;
 }
 
@@ -442,27 +450,12 @@ body{
     align-items: center;
 }
 
-footer{
-    text-align: center;
-    font-size: small;
-    font-family: 'Roboto', sans-serif;
-    width: 100%;
-    color: white;
-    margin-top: 2rem;
-    padding-top: 1%;   
-}
-
-.footer__p{
-    font-weight: bolder;
-}
-
 .footer__p__section {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-
 
 .footer__p__section__1 {
     padding-right: 2rem;
@@ -477,65 +470,22 @@ footer{
     padding-bottom: 2rem;
 }
 
-.divIcons {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    row-gap: 1rem;
-    position: fixed;
-    right: 2rem;
-    bottom: 2rem;
-    z-index: 8;
-    height: 20vh;
-}
-
-.divIcons__allIcons {
-    width: 2rem;
-    height: 2rem;
-}
-
-.divIcons__icon1, .divIcons__icon2, .divIcons__icon3 {
-    color: white;
-    transform: translateX(-25%);
-    animation: floater 3.5s infinite;
-    transition: ease 1.75s;
-}
-
-.divIcons__icon1 {
-    animation-delay: 0s;
-}
-
-.divIcons__icon2 {
-    animation-delay: 0.5s;
-}
-
-.divIcons__icon3 {
-    animation-delay: 1s;
-}
-
-@keyframes floater {
-    0%{transform: translateX(-25%);transition: ease 1.75s;}
-    50%{transform: translateX(25%);transition: ease 1.75s;}
-  }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
-    footer {
-        margin-top: 2rem;
+
+    .divIcons__allIcons {
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
-    .footer__p__section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; 
+    .tituloIndex {
+        font-size: x-large;
     }
 
-    .footer__p__section__1, .footer__p__section__2{
-        padding-left: 0rem;
-        padding-right: 0rem;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
+    .divEvento {
+        font-size: 1.5rem;
     }
+
     .divIndex{
         min-height: 50%;
         display: flex;
@@ -581,39 +531,12 @@ footer{
     .tiposDeServicios {
         display: grid;
         grid-template-areas: "estandar" 
-        "gold" 
+        "serviciogold" 
         "premium";
     }
 
     .tiposDeServicios__div1, .tiposDeServicios__div2, .tiposDeServicios__div3 {
         margin-top: 5%;
-    }
-
-    .divGaleria {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .imagenContacto1, .imagenContacto2 {
-        display: none;
-    }
-
-    .divIcons__allIcons {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-
-    .titulo {
-        font-size: x-large;
-    }
-
-    .logoHeader {
-        width: 4rem;
-        height: 2rem;
-    }
-
-    .divEvento {
-        font-size: 1.5rem;
     }
 
     .serviciosDiv div a {
@@ -627,23 +550,39 @@ footer{
     .tiposDeServicios__div1 h3, .tiposDeServicios__div2 h3, .tiposDeServicios__div3 h3 {
         font-size: large;
     }
+    
+    .divGaleria {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__p__section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .footer__p__section__1, .footer__p__section__2{
+        padding-left: 0rem;
+        padding-right: 0rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
 }
 
-@media screen and (min-width: 769px) and (max-width: 1023px) {
+@media screen and (min-width: 769px) and (max-width: 1200px) {
     .nosotros__p1, .nosotros__p2, .nosotros__p3 {
         margin-left: 2rem;
         margin-right: 2rem;
         text-align: justify;
     }
-
-    footer {
-        margin-top: 2rem;
-    }   
     
     .tiposDeServicios {
         display: grid;
         grid-template-areas: "estandar" 
-        "gold" 
+        "serviciogold" 
         "premium";
     }
 
@@ -654,10 +593,6 @@ footer{
     .divGaleria {
         display: flex;
         flex-direction: column;
-    }
-
-    .imagenContacto1, .imagenContacto2 {
-        display: none;
     }
 
 }
