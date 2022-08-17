@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.bodyIndex {
+  background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/Barra-Movil-Evento-Fondo.png); }
+
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  min-height: 100vh; }
+  body header {
+    grid-area: header;
+    position: sticky;
+    top: 0rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: black;
+    z-index: 9; }
+    body header .navbar-collapse {
+      text-align: center; }
+      body header .navbar-collapse .nav-item {
+        transition: ease 400ms; }
+        body header .navbar-collapse .nav-item:hover {
+          transform: scale(1.2); }
+        body header .navbar-collapse .nav-item .nav-link {
+          font-size: large !important;
+          font-family: 'Roboto', sans-serif;
+          transition-property: size;
+          transition-duration: infinite;
+          transition: ease 400ms;
+          color: white !important; }
+          body header .navbar-collapse .nav-item .nav-link:hover {
+            color: #700a0a !important; }
+    body header .navbar-brand {
+      color: white !important; }
+    body header .custom-toggler .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+    body header .custom-toggler, body header .navbar-toggler {
+      border-color: white !important; }
+  body .logoHeader {
+    width: 5rem;
+    height: 3rem;
+    padding-left: 2rem; }
+  body main {
+    grid-area: main; }
+    body main .divIcons {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      row-gap: 1rem;
+      position: fixed;
+      right: 2rem;
+      bottom: 2rem;
+      z-index: 8;
+      height: 20vh; }
+      body main .divIcons .divIcons__allIcons {
+        width: 2rem;
+        height: 2rem; }
+      body main .divIcons .divIcons__icon1, body main .divIcons .divIcons__icon2, body main .divIcons .divIcons__icon3 {
+        color: white;
+        transform: translateX(-25%);
+        animation: floater 3.5s infinite;
+        transition: ease 1.75s;
+        animation-delay: 0s; }
+      body main .divIcons .divIcons__icon2 {
+        animation-delay: 0.5s; }
+      body main .divIcons .divIcons__icon3 {
+        animation-delay: 1s; }
+
+@keyframes floater {
+  0% {
+    transform: translateX(-25%);
+    transition: ease 1.75s; }
+  50% {
+    transform: translateX(25%);
+    transition: ease 1.75s; } }
+    body main .tituloIndex {
+      text-align: center;
+      font-size: xx-large;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      color: white; }
+    body main .divEvento {
+      font-family: 'Roboto', sans-serif;
+      font-size: 2rem;
+      text-align: center;
+      padding-top: 40vh;
+      font-weight: bolder;
+      color: white;
+      height: 80vh; }
+    body main .divIndex {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      color: wheat; }
+      body main .divIndex .divIndex__div1, body main .divIndex .divIndex__div2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 92.5%;
+        font-family: 'PT Sans', sans-serif;
+        font-weight: bold;
+        text-align: center; }
+        body main .divIndex .divIndex__div1 .divIndex__div1__h3, body main .divIndex .divIndex__div2 .divIndex__div1__h3, body main .divIndex .divIndex__div2 .divIndex__div2__h3 {
+          font-size: larger;
+          color: coral;
+          font-weight: bold; }
+        body main .divIndex .divIndex__div1 .divIndex__div1__h3__p, body main .divIndex .divIndex__div2 .divIndex__div1__h3__p, body main .divIndex .divIndex__div2 .divIndex__div2__h3__p, body main .divIndex .divIndex__div1 .divIndex__div2__h3 .divIndex__div2__h3__p, body main .divIndex .divIndex__div2__h3 .divIndex__div1 .divIndex__div2__h3__p {
+          font-size: large;
+          color: wheat;
+          margin-bottom: 3rem;
+          margin-right: 2.5rem;
+          margin-left: 2.5rem; }
+  body footer {
+    grid-area: footer;
+    text-align: center;
+    font-size: small;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    margin-top: 3%; }
+    body footer .footer__p__section {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      body footer .footer__p__section .footer__p__section__1 {
+        padding-right: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        line-height: 3px; }
+      body footer .footer__p__section .footer__p__section__2 {
+        padding-left: 3rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem; }
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  body main .divIcons .divIcons__allIcons {
+    width: 1.5rem;
+    height: 1.5rem; }
+  body main .tituloIndex {
+    font-size: x-large; }
+  body main .divEvento {
+    font-size: 1.5rem; }
+  body main .divIndex {
+    min-height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    body main .divIndex .divIndex__div1__h3, body main .divIndex .divIndex__div2 .divIndex__div2__h3 {
+      position: relative;
+      left: 1rem;
+      right: auto;
+      margin-top: 2rem;
+      font-size: large; }
+      body main .divIndex .divIndex__div1__h3 .divIndex__div1__h3__p, body main .divIndex .divIndex__div2 .divIndex__div2__h3 .divIndex__div1__h3__p, body main .divIndex .divIndex__div1__h3 .divIndex__div2 .divIndex__div2__h3__p, body main .divIndex .divIndex__div2 .divIndex__div1__h3 .divIndex__div2__h3__p, body main .divIndex .divIndex__div1__h3 .divIndex__div2__h3 .divIndex__div2__h3__p, body main .divIndex .divIndex__div2__h3 .divIndex__div1__h3 .divIndex__div2__h3__p, body main .divIndex .divIndex__div2 .divIndex__div2__h3 .divIndex__div2__h3__p {
+        margin-left: 0rem;
+        margin-right: 0rem;
+        font-size: medium; }
+    body main .divIndex .divIndex__div2__h3 {
+      position: relative;
+      left: auto;
+      right: auto;
+      font-size: large; }
+  body footer .footer__p__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    body footer .footer__p__section .footer__p__section__1, body footer .footer__p__section .footer__p__section__2 {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem; } }
