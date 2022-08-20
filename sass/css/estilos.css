@@ -147,6 +147,55 @@ body main .divIndex {
       margin-right: 2.5rem;
       margin-left: 2.5rem; }
 
+.bodyServicios {
+  background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/Bartender-Flair-oscuro.png);
+  background-size: cover; }
+
+.serviciosDiv p {
+  font-family: 'PT Sans', sans-serif;
+  font-size: large;
+  line-height: 1.5rem;
+  color: wheat;
+  text-align: justify; }
+
+.serviciosDiv__p {
+  padding-left: 2rem;
+  padding-right: 2rem; }
+
+.serviciosDiv div a {
+  text-decoration: none;
+  font-family: 'PT Sans', sans-serif;
+  color: wheat;
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+  margin-bottom: 3%; }
+
+.tiposDeServicios {
+  display: grid;
+  grid-template-areas: "estandar serviciogold premium";
+  grid-column-gap: 8%;
+  margin-top: 1rem;
+  padding-right: 2rem; }
+  .tiposDeServicios .tiposDeServicios__div1 {
+    grid-area: estandar;
+    display: flex;
+    flex-direction: column; }
+  .tiposDeServicios .tiposDeServicios__div2 {
+    grid-area: serviciogold;
+    display: flex;
+    flex-direction: column; }
+  .tiposDeServicios .tiposDeServicios__div3 {
+    grid-area: premium;
+    display: flex;
+    flex-direction: column; }
+
+.tiposDeServicios__div1__h2 {
+  text-align: center;
+  color: coral;
+  font-size: x-large; }
+
 .bodyNosotros {
   background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/Equipo-de-Bartenders-Oscuro.png);
   background-position-x: 80%;
@@ -173,6 +222,148 @@ body main .divIndex {
     margin-left: 3rem;
     margin-top: 2rem;
     margin-right: 45rem; }
+
+.body__Galeria__Contacto {
+  background-image: linear-gradient(180deg, black 0%, #444343 50%, black 100%); }
+
+.divGaleria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 15vw);
+  grid-gap: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem; }
+  .divGaleria .galeria1 {
+    height: 100%;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    transition: transform 0.5s ease; }
+  .divGaleria .galeria2 {
+    height: 100%;
+    width: 100%;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    transition: transform 0.5s ease; }
+  .divGaleria .galeria3 {
+    height: 100%;
+    width: 100%;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    transition: transform 0.5s ease; }
+  .divGaleria .galeria4 {
+    height: 100%;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    transition: transform 0.5s ease; }
+  .divGaleria .galeria5 {
+    height: 100%;
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    transition: transform 0.5s ease; }
+  .divGaleria .galeria6 {
+    height: 100%;
+    width: 100%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    transition: transform 0.5s ease; }
+  .divGaleria .galeria7 {
+    height: 100%;
+    width: 100%;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    transition: transform 0.5s ease; }
+  .divGaleria .galeria8 {
+    height: 100%;
+    width: 100%;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    transition: transform 0.5s ease; }
+  .divGaleria .galeria9 {
+    height: 100%;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    transition: transform .5s ease; }
+  .divGaleria .galeria10 {
+    height: 100%;
+    width: 100%;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    transition: transform 0.5s ease; }
+  .divGaleria .galeria11 {
+    height: 100%;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 7;
+    transition: transform .5s ease; }
+  .divGaleria .galeria12 {
+    height: 100%;
+    width: 100%;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    transition: transform 0.5s ease; }
+
+.galeria1:hover, .galeria2:hover, .galeria3:hover, .galeria4:hover, .galeria5:hover, .galeria6:hover, .galeria7:hover, .galeria8:hover, .galeria9:hover, .galeria10:hover, .galeria11:hover, .galeria12:hover {
+  transform: scale(1.04);
+  z-index: 7;
+  border: white 2px solid; }
+
+.body__Galeria__Contacto main h2 {
+  font-family: 'PT Sans', sans-serif;
+  font-size: large;
+  text-align: center;
+  color: white;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem; }
+  .contacto .contacto__nombre, .contacto .contacto__celular, .contacto .contacto__email, .contacto .contacto__comentarios {
+    font-family: 'PT Sans', sans-serif;
+    width: 25rem; }
+  .contacto .contacto__reset, .contacto .contacto__submit {
+    font-family: 'PT Sans', sans-serif; }
+
+.imgContacto1 {
+  width: 95%; }
+
+.imgContacto2 {
+  width: 90%; }
+
+.mapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
   body main .divIcons .divIcons__allIcons {
@@ -203,6 +394,15 @@ body main .divIndex {
       left: auto;
       right: auto;
       font-size: large; }
+  body .bodyNosotros {
+    background-position-x: 100%;
+    background-position-y: top;
+    background-repeat: repeat-y; }
+  body .nosotros .nosotros__p1, body .nosotros .nosotros__p2, body .nosotros .nosotros__p3 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: justify;
+    font-size: medium; }
   body footer .footer__p__section {
     display: flex;
     flex-direction: column;

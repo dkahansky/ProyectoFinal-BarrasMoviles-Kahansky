@@ -1,0 +1,57 @@
+.bodyServicios {
+    background-image: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(68, 67, 67, 0) 50%, rgb(0, 0, 0) 100%), url(../../img/Bartender-Flair-oscuro.png);
+    background-size: cover;
+}
+
+.serviciosDiv p {
+    font-family: 'PT Sans', sans-serif;
+    font-size: large;
+    line-height: 1.5rem;
+    color: wheat;
+    text-align: justify;
+}
+
+.serviciosDiv__p {
+    padding-left: $remstandard;
+    padding-right: $remstandard;
+}
+
+.serviciosDiv div a {
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    color: wheat;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.tiposDeServicios {
+    display: grid;
+    grid-template-areas: "estandar serviciogold premium";
+    grid-column-gap: 8%;
+    margin-top: 1rem;
+    padding-right: 2rem;
+
+    .tiposDeServicios__div1 {
+        grid-area: map-get($grid-area, estandar);
+        @include display-flex(column);
+    }
+
+    .tiposDeServicios__div2 {
+        grid-area: map-get($grid-area, sgold);
+        @include display-flex(column); 
+    }
+
+    .tiposDeServicios__div3 {
+        grid-area: map-get($grid-area, premium);
+        @include display-flex(column); 
+    }
+}
+
+.tiposDeServicios__div1__h2 {
+    text-align: center;
+    color: coral;
+    font-size: x-large;
+}

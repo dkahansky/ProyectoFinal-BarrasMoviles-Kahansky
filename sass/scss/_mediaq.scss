@@ -51,6 +51,21 @@
             }
         }
 
+        .bodyNosotros {
+            background-position-x: 100%;
+            background-position-y: top;
+            background-repeat: repeat-y;
+        }
+
+        .nosotros {
+            .nosotros__p1, .nosotros__p2, .nosotros__p3 {
+                margin-left: 2rem;
+                margin-right: 2rem;
+                text-align: justify;
+                font-size: medium;
+            }
+        }
+
         footer {
             .footer__p__section {
                 display: flex;
