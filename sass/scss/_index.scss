@@ -145,13 +145,13 @@ body {
             text-align: center;
         
 
-            .divIndex__div1__h3 {
+            .divIndex__div1__h2 {
                 font-size: larger;
                 color: coral;
                 font-weight: bold;
             } 
 
-            .divIndex__div1__h3__p {
+            .divIndex__div1__h2__p {
                 font-size: large;
                 color: wheat;
                 margin-bottom: 3rem;
@@ -163,12 +163,12 @@ body {
         .divIndex__div2 {
                 @extend .divIndex__div1;
 
-            .divIndex__div2__h3 {
-                @extend .divIndex__div1__h3;
+            .divIndex__div2__h2 {
+                @extend .divIndex__div1__h2;
             } 
 
-            .divIndex__div2__h3__p {
-                @extend .divIndex__div1__h3__p;
+            .divIndex__div2__h2__p {
+                @extend .divIndex__div1__h2__p;
             }
         }
     }

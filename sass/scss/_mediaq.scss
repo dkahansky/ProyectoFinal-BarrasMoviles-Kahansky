@@ -24,28 +24,28 @@
                 justify-content: center;
                 align-items: center; 
               
-                .divIndex__div1__h3 {
+                .divIndex__div1__h2 {
                     position: relative;
                     left: 1rem;
                     right: auto;
                     margin-top: 2rem;
                     font-size: large; 
         
-                    .divIndex__div1__h3__p {
+                    .divIndex__div1__h2__p {
                         margin-left: 0rem;
                         margin-right: 0rem;
                         font-size: medium; 
                     }
                 }
         
-                .divIndex__div2__h3 {
+                .divIndex__div2__h2 {
                     position: relative;
                     left: auto;
                     right: auto;
                     font-size: large;
                 
-                    .divIndex__div2__h3__p {
-                        @extend .divIndex__div1__h3__p 
+                    .divIndex__div2__h2__p {
+                        @extend .divIndex__div1__h2__p 
                     }
                 }
             }

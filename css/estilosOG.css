@@ -161,7 +161,7 @@ footer {
     text-align: center;
 }
 
-.divIndex__div1 h3, .divIndex__div2 h3 {
+.divIndex__div1 h2, .divIndex__div2 h2 {
     font-size: larger;
     color: coral;
     font-weight: bold;
@@ -262,7 +262,7 @@ footer {
     flex-direction: column;
 }
 
-.tiposDeServicios__div1 h3, .tiposDeServicios__div2 h3, .tiposDeServicios__div3 h3 {
+.tiposDeServicios__div1 h2, .tiposDeServicios__div2 h2, .tiposDeServicios__div3 h2 {
     text-align: center;
     color: coral;
     font-size: x-large;
@@ -494,7 +494,7 @@ footer {
         align-items: center;
     }
 
-    .divIndex__div1 h3 {
+    .divIndex__div1 h2 {
         position: relative;
         left: 1rem;
         right: auto;
@@ -502,7 +502,7 @@ footer {
         font-size: large;
     }
 
-    .divIndex__div2 h3 { 
+    .divIndex__div2 h2 { 
         position: relative;
         left: auto;
         right: auto;
@@ -547,7 +547,7 @@ footer {
         font-size: medium;
     }
 
-    .tiposDeServicios__div1 h3, .tiposDeServicios__div2 h3, .tiposDeServicios__div3 h3 {
+    .tiposDeServicios__div1 h2, .tiposDeServicios__div2 h2, .tiposDeServicios__div3 h2 {
         font-size: large;
     }
     
