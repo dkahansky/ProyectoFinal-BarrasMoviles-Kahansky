@@ -4,8 +4,13 @@
   padding: 0;
   box-sizing: border-box; }
 
-.bodyIndex {
-  background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/Barra-Movil-Evento-Fondo.png); }
+.h1Pages {
+  font-family: 'PT Sans', sans-serif;
+  font-size: x-large;
+  text-align: center;
+  color: white;
+  margin-top: 2rem;
+  margin-bottom: 1rem; }
 
 body {
   display: grid;
@@ -77,43 +82,6 @@ body {
   50% {
     transform: translateX(25%);
     transition: ease 1.75s; } }
-    body main .tituloIndex {
-      text-align: center;
-      font-size: xx-large;
-      font-family: 'Roboto', sans-serif;
-      font-weight: bold;
-      color: white; }
-    body main .divEvento {
-      font-family: 'Roboto', sans-serif;
-      font-size: 2rem;
-      text-align: center;
-      padding-top: 40vh;
-      font-weight: bolder;
-      color: white;
-      height: 80vh; }
-    body main .divIndex {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      color: wheat; }
-      body main .divIndex .divIndex__div1, body main .divIndex .divIndex__div2 {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: 92.5%;
-        font-family: 'PT Sans', sans-serif;
-        font-weight: bold;
-        text-align: center; }
-        body main .divIndex .divIndex__div1 .divIndex__div1__h2, body main .divIndex .divIndex__div2 .divIndex__div1__h2, body main .divIndex .divIndex__div2 .divIndex__div2__h2 {
-          font-size: larger;
-          color: coral;
-          font-weight: bold; }
-        body main .divIndex .divIndex__div1 .divIndex__div1__h2__p, body main .divIndex .divIndex__div2 .divIndex__div1__h2__p, body main .divIndex .divIndex__div2 .divIndex__div2__h2__p, body main .divIndex .divIndex__div1 .divIndex__div2__h2 .divIndex__div2__h2__p, body main .divIndex .divIndex__div2__h2 .divIndex__div1 .divIndex__div2__h2__p {
-          font-size: large;
-          color: wheat;
-          margin-bottom: 3rem;
-          margin-right: 2.5rem;
-          margin-left: 2.5rem; }
   body footer {
     grid-area: footer;
     text-align: center;
@@ -135,6 +103,76 @@ body {
         padding-left: 3rem;
         padding-top: 1rem;
         padding-bottom: 2rem; }
+
+.bodyIndex {
+  background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/Barra-Movil-Evento-Fondo.png); }
+
+body main .tituloIndex {
+  text-align: center;
+  font-size: xx-large;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: white; }
+
+body main .divEvento {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 40vh;
+  font-weight: bolder;
+  color: white;
+  height: 80vh; }
+
+body main .divIndex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: wheat; }
+  body main .divIndex .divIndex__div1, body main .divIndex .divIndex__div2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 92.5%;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    text-align: center; }
+    body main .divIndex .divIndex__div1 .divIndex__div1__h2, body main .divIndex .divIndex__div2 .divIndex__div1__h2, body main .divIndex .divIndex__div2 .divIndex__div2__h2 {
+      font-size: larger;
+      color: coral;
+      font-weight: bold; }
+    body main .divIndex .divIndex__div1 .divIndex__div1__h2__p, body main .divIndex .divIndex__div2 .divIndex__div1__h2__p, body main .divIndex .divIndex__div2 .divIndex__div2__h2__p, body main .divIndex .divIndex__div1 .divIndex__div2__h2 .divIndex__div2__h2__p, body main .divIndex .divIndex__div2__h2 .divIndex__div1 .divIndex__div2__h2__p {
+      font-size: large;
+      color: wheat;
+      margin-bottom: 3rem;
+      margin-right: 2.5rem;
+      margin-left: 2.5rem; }
+
+.bodyNosotros {
+  background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/Equipo-de-Bartenders-Oscuro.png);
+  background-position-x: 80%;
+  background-position-y: 100%; }
+
+.nosotros {
+  color: wheat;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  line-height: 2rem; }
+  .nosotros .nosotros__p1 {
+    margin-left: 3rem;
+    margin-right: 45rem;
+    margin-top: 2rem; }
+  .nosotros .nosotros__p2 {
+    margin-right: 3rem;
+    margin-top: 2rem;
+    margin-left: 45rem; }
+  .nosotros .nosotros__p3 {
+    margin-left: 3rem;
+    margin-top: 2rem;
+    margin-right: 45rem; }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
   body main .divIcons .divIcons__allIcons {
