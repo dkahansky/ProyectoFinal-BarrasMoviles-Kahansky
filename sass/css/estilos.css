@@ -403,6 +403,20 @@ body main .divIndex {
     margin-right: 2rem;
     text-align: justify;
     font-size: medium; }
+  body .tiposDeServicios {
+    display: grid;
+    grid-template-areas: "estandar"  "serviciogold"  "premium"; }
+    body .tiposDeServicios .tiposDeServicios__div1, body .tiposDeServicios .tiposDeServicios__div2, body .tiposDeServicios .tiposDeServicios__div3 {
+      margin-top: 5%; }
+      body .tiposDeServicios .tiposDeServicios__div1 .tiposDeServicios__div1__h2, body .tiposDeServicios .tiposDeServicios__div1 .tiposDeServicios__div2__h2, body .tiposDeServicios .tiposDeServicios__div1 .tiposDeServicios__div3__h2, body .tiposDeServicios .tiposDeServicios__div2 .tiposDeServicios__div1__h2, body .tiposDeServicios .tiposDeServicios__div2 .tiposDeServicios__div2__h2, body .tiposDeServicios .tiposDeServicios__div2 .tiposDeServicios__div3__h2, body .tiposDeServicios .tiposDeServicios__div3 .tiposDeServicios__div1__h2, body .tiposDeServicios .tiposDeServicios__div3 .tiposDeServicios__div2__h2, body .tiposDeServicios .tiposDeServicios__div3 .tiposDeServicios__div3__h2 {
+        font-size: large; }
+  body .serviciosDiv div a {
+    font-size: x-large; }
+  body .serviciosDiv p {
+    font-size: medium; }
+  body .divGaleria {
+    display: flex;
+    flex-direction: column; }
   body footer .footer__p__section {
     display: flex;
     flex-direction: column;
@@ -413,3 +427,17 @@ body main .divIndex {
       padding-right: 0rem;
       padding-top: 0.5rem;
       padding-bottom: 0.5rem; } }
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .nosotros .nosotros__p1, .nosotros .nosotros__p2, .nosotros .nosotros__p3 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: justify; }
+  .tiposDeServicios {
+    display: grid;
+    grid-template-areas: "estandar"  "serviciogold"  "premium"; }
+    .tiposDeServicios .tiposDeServicios__div1, .tiposDeServicios .tiposDeServicios__div2, .tiposDeServicios .tiposDeServicios__div3 {
+      margin-top: 5%; }
+  .divGaleria {
+    display: flex;
+    flex-direction: column; } }

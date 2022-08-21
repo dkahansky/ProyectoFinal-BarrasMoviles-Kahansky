@@ -1,42 +1,7 @@
 
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
-
-    .bodyNosotros {
-        background-position-x: 100%;
-        background-position-y: top;
-        background-repeat: repeat-y;
-    }
-
-    .nosotros__p1, .nosotros__p2, .nosotros__p3 {
-        margin-left: 2rem;
-        margin-right: 2rem;
-        text-align: justify;
-        font-size: medium;
-    }
-
-    .tiposDeServicios {
-        display: grid;
-        grid-template-areas: "estandar" 
-        "serviciogold" 
-        "premium";
-    }
-
-    .tiposDeServicios__div1, .tiposDeServicios__div2, .tiposDeServicios__div3 {
-        margin-top: 5%;
-    }
-
-    .serviciosDiv div a {
-        font-size: x-large;
-    }
-
-    .serviciosDiv p {
-        font-size: medium;
-    }
-
-    .tiposDeServicios__div1 h2, .tiposDeServicios__div2 h2, .tiposDeServicios__div3 h2 {
-        font-size: large;
-    }
+    
     
     .divGaleria {
         display: flex;
