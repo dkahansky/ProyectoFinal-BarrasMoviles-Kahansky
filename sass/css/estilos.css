@@ -105,7 +105,8 @@ body {
         padding-bottom: 2rem; }
 
 .bodyIndex {
-  background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/Barra-Movil-Evento-Fondo.png); }
+  background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/barra-movil-evento-fondo.png);
+  background-position: center; }
 
 body main .tituloIndex {
   text-align: center;
@@ -148,7 +149,7 @@ body main .divIndex {
       margin-left: 2.5rem; }
 
 .bodyServicios {
-  background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/Bartender-Flair-oscuro.png);
+  background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/bartender-flair-oscuro.png);
   background-size: cover; }
 
 .serviciosDiv p {
@@ -170,7 +171,10 @@ body main .divIndex {
   display: flex;
   justify-content: center;
   margin-top: 3%;
-  margin-bottom: 3%; }
+  margin-bottom: 3%;
+  transition: ease 400ms; }
+  .serviciosDiv div a:hover {
+    color: #a70000; }
 
 .tiposDeServicios {
   display: grid;
@@ -197,7 +201,7 @@ body main .divIndex {
   font-size: x-large; }
 
 .bodyNosotros {
-  background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/Equipo-de-Bartenders-Oscuro.png);
+  background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/equipo-de-bartenders-oscuro.png);
   background-position-x: 80%;
   background-position-y: 100%; }
 
@@ -426,13 +430,32 @@ body main .divIndex {
       padding-left: 0rem;
       padding-right: 0rem;
       padding-top: 0.5rem;
-      padding-bottom: 0.5rem; } }
+      padding-bottom: 0.5rem; }
+  .bodyIndex {
+    background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/barra-movil-evento-fondo-sm.png);
+    background-position: center; }
+  .bodyNosotros {
+    background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/equipo-de-bartenders-oscuro-sm.png); }
+  .bodyServicios {
+    background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/bartender-flair-oscuro-sm.png);
+    background-position: center;
+    background-size: 100vw; } }
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
+  .bodyIndex {
+    background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/barra-movil-evento-fondo-md.png);
+    background-position: center; }
+  .bodyNosotros {
+    background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/equipo-de-bartenders-oscuro-md.png);
+    background-position: center; }
   .nosotros .nosotros__p1, .nosotros .nosotros__p2, .nosotros .nosotros__p3 {
     margin-left: 2rem;
     margin-right: 2rem;
     text-align: justify; }
+  .bodyServicios {
+    background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/bartender-flair-oscuro-md.png);
+    background-position: center;
+    background-size: 100vw; }
   .tiposDeServicios {
     display: grid;
     grid-template-areas: "estandar"  "serviciogold"  "premium"; }
