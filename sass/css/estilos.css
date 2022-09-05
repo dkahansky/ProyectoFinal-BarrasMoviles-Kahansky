@@ -355,7 +355,7 @@ body main .divIndex {
   row-gap: 1rem; }
   .contacto .contacto__nombre, .contacto .contacto__celular, .contacto .contacto__email, .contacto .contacto__comentarios {
     font-family: 'PT Sans', sans-serif;
-    width: 23rem; }
+    width: 20rem; }
   .contacto .contacto__reset, .contacto .contacto__submit {
     font-family: 'PT Sans', sans-serif; }
 
@@ -442,10 +442,8 @@ body main .divIndex {
     background-position: center;
     background-size: 100vw; }
   .h2Contacto {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center; } }
+    padding-left: 7rem;
+    padding-right: 7rem; } }
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
   .bodyIndex {
