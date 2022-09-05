@@ -355,7 +355,7 @@ body main .divIndex {
   row-gap: 1rem; }
   .contacto .contacto__nombre, .contacto .contacto__celular, .contacto .contacto__email, .contacto .contacto__comentarios {
     font-family: 'PT Sans', sans-serif;
-    width: 20rem; }
+    width: 23rem; }
   .contacto .contacto__reset, .contacto .contacto__submit {
     font-family: 'PT Sans', sans-serif; }
 
