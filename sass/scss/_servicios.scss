@@ -37,7 +37,8 @@
     grid-template-areas: "estandar serviciogold premium";
     grid-column-gap: 8%;
     margin-top: 1rem;
-    padding-right: 2rem;
+    padding-right: $remstandard;
+    padding-left: $remstandard;
 
     .tiposDeServicios__div1 {
         grid-area: map-get($grid-area, estandar);

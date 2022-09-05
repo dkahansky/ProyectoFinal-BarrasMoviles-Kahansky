@@ -181,7 +181,8 @@ body main .divIndex {
   grid-template-areas: "estandar serviciogold premium";
   grid-column-gap: 8%;
   margin-top: 1rem;
-  padding-right: 2rem; }
+  padding-right: 2rem;
+  padding-left: 2rem; }
   .tiposDeServicios .tiposDeServicios__div1 {
     grid-area: estandar;
     display: flex;
@@ -354,7 +355,7 @@ body main .divIndex {
   row-gap: 1rem; }
   .contacto .contacto__nombre, .contacto .contacto__celular, .contacto .contacto__email, .contacto .contacto__comentarios {
     font-family: 'PT Sans', sans-serif;
-    width: 25rem; }
+    width: 20rem; }
   .contacto .contacto__reset, .contacto .contacto__submit {
     font-family: 'PT Sans', sans-serif; }
 
@@ -439,7 +440,12 @@ body main .divIndex {
   .bodyServicios {
     background-image: linear-gradient(180deg, black 0%, rgba(68, 67, 67, 0) 50%, black 100%), url(../../img/bartender-flair-oscuro-sm.png);
     background-position: center;
-    background-size: 100vw; } }
+    background-size: 100vw; }
+  .h2Contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center; } }
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
   .bodyIndex {
