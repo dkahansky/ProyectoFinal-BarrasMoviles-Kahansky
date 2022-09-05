@@ -442,8 +442,8 @@ body main .divIndex {
     background-position: center;
     background-size: 100vw; }
   .h2Contacto {
-    padding-left: 7rem;
-    padding-right: 7rem; } }
+    padding-left: 5rem;
+    padding-right: 5rem; } }
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
   .bodyIndex {
